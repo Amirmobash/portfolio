@@ -1,554 +1,527 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amir Mobasheraghdam | Automation, n8n, Machine Learning & Bücher</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Amir Mobasheraghdam | Books, Projects, Automation (n8n) & Machine Learning (DE/EN)</title>
 
-    <!-- SEO - Alle Namensvarianten für Google -->
-    <meta name="description" content="Offizielle Website von Amir Mobasheraghdam (Amir Mobasher Aghdam, امیر مبشراقدم). Autor von 'Mein Computer lernt von mir' (Raspberry Pi ML) und 'Ergebnis-Automation für die Bundesliga mit n8n' (mit Ladan Seddighi). Projekte: KI-Fahrradhelm, Automation, n8n Workflows.">
-    <meta name="keywords" content="Amir Mobasheraghdam, Amir Mobasher Aghdam, Amir Mobasher, امیر مبشراقدم, Ergebnis-Automation für die Bundesliga mit n8n, Mein Computer lernt von mir, n8n Bundesliga Bot, Raspberry Pi Machine Learning Buch, Ladan Seddighi, Automation Engineer, KI Fahrradhelm, AI bicycle helmet, BoD, Thalia, Hugendubel, Osiander, jpc, medimops, rebuy, Amazon, Waterstones, Bokus, Saxo">
-    <meta name="author" content="Amir Mobasheraghdam">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://[deine-domain.de]">
+  <!-- SEO -->
+  <meta name="description" content="Official (DE/EN) page for Amir Mobasheraghdam: books, projects, and direct shop links. Topics: n8n automation, Bundesliga result automation, Raspberry Pi machine learning." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="#" />
 
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="Amir Mobasheraghdam | Autor für Automation & Machine Learning">
-    <meta property="og:description" content="Bücher über n8n-Automation (Bundesliga) und Machine Learning mit Raspberry Pi. Direkte Shop-Links für Deutschland, Österreich, Schweiz, UK, Schweden, Dänemark & mehr.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://[deine-domain.de]">
-    <meta property="og:locale" content="de_DE">
-    <meta property="og:locale:alternate" content="en_US">
-    <meta property="og:image" content="https://[deine-domain.de]/profilbild.jpg"> <!-- Hier dein Profilbild einfügen -->
+  <!-- Keywords (DE/EN only) -->
+  <meta name="keywords" content="
+    Amir Mobasheraghdam,
+    Amir Mobasher Aghdam,
+    Amir Mobasheraghdam Autor,
+    Amir Mobasheraghdam author,
+    Amir Mobasheraghdam Bücher,
+    Amir Mobasheraghdam books,
+    Mein Computer lernt von mir,
+    Ergebnis-Automation für die Bundesliga mit n8n,
+    Bundesliga Ergebnis Automation,
+    n8n Bundesliga Automation,
+    Raspberry Pi Machine Learning,
+    Machine Learning Raspberry Pi,
+    Workflow Automation,
+    Data Automation,
+    ETL,
+    API Automation
+  " />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Amir Mobasheraghdam">
-    <meta name="twitter:description" content="Bücher & Projekte zu n8n, Raspberry Pi & KI.">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Amir Mobasheraghdam | Books & Projects (DE/EN)" />
+  <meta property="og:description" content="Books, projects and direct shop links for Amir Mobasheraghdam." />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:locale:alternate" content="en_US" />
 
-    <!-- Design: clean, modern, responsive -->
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background: #f5f7fa;
-            color: #1e293b;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem;
-        }
-        header {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: white;
-            padding: 3rem 2rem;
-            border-radius: 24px;
-            margin-bottom: 2rem;
-            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.2);
-            text-align: center;
-        }
-        .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 4px solid #3b82f6;
-            margin: 0 auto 1.5rem auto;
-            background: #cbd5e1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: #475569;
-            overflow: hidden;
-        }
-        .profile-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        h1 {
-            font-size: 2.8rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.5px;
-        }
-        .badge-container {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 1rem 0;
-        }
-        .badge {
-            background: rgba(255,255,255,0.15);
-            backdrop-filter: blur(4px);
-            padding: 0.4rem 1rem;
-            border-radius: 100px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            border: 1px solid rgba(255,255,255,0.2);
-        }
-        .lang-switch {
-            margin: 1.5rem 0 0;
-            display: flex;
-            gap: 0.5rem;
-            justify-content: center;
-        }
-        .lang-btn {
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.3);
-            color: white;
-            padding: 0.6rem 1.5rem;
-            border-radius: 40px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
-            font-size: 1rem;
-        }
-        .lang-btn.active {
-            background: #3b82f6;
-            border-color: #3b82f6;
-        }
-        .lang-btn:hover {
-            background: rgba(255,255,255,0.25);
-        }
-        h2 {
-            font-size: 2rem;
-            font-weight: 600;
-            margin: 2.5rem 0 1rem;
-            color: #0f172a;
-            border-bottom: 3px solid #3b82f6;
-            padding-bottom: 0.5rem;
-            display: inline-block;
-        }
-        h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin: 1.5rem 0 0.8rem;
-            color: #1e293b;
-        }
-        .bio-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 24px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-            margin: 2rem 0;
-            border: 1px solid #e2e8f0;
-        }
-        .name-variants {
-            background: #f1f5f9;
-            padding: 1rem 1.5rem;
-            border-radius: 16px;
-            margin: 1.5rem 0;
-            font-size: 1.1rem;
-            border-left: 4px solid #3b82f6;
-        }
-        .project-highlight {
-            background: #f0f9ff;
-            border-left: 4px solid #3b82f6;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            border-radius: 12px;
-        }
-        .book-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        .book-card {
-            background: white;
-            border-radius: 20px;
-            padding: 1.8rem;
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
-            border: 1px solid #e2e8f0;
-            transition: transform 0.2s;
-        }
-        .book-card:hover {
-            transform: translateY(-5px);
-        }
-        .book-cover-placeholder {
-            width: 100%;
-            height: 200px;
-            background: linear-gradient(145deg, #d9e2ef, #cbd5e1);
-            border-radius: 16px;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #475569;
-            font-size: 4rem;
-        }
-        .isbn {
-            font-family: monospace;
-            background: #f1f5f9;
-            padding: 0.3rem 0.8rem;
-            border-radius: 40px;
-            font-size: 0.9rem;
-            display: inline-block;
-            margin: 0.8rem 0;
-        }
-        .links-container {
-            max-height: 300px;
-            overflow-y: auto;
-            border: 1px solid #e2e8f0;
-            border-radius: 16px;
-            padding: 0.8rem;
-            background: #f8fafc;
-            margin-top: 1rem;
-        }
-        .links-container a {
-            display: block;
-            padding: 0.6rem 0.8rem;
-            color: #2563eb;
-            text-decoration: none;
-            border-bottom: 1px solid #e2e8f0;
-            font-size: 0.95rem;
-            transition: background 0.2s;
-            word-break: break-word;
-        }
-        .links-container a:last-child {
-            border-bottom: none;
-        }
-        .links-container a:hover {
-            background: #dbeafe;
-            text-decoration: underline;
-        }
-        .shop-country {
-            color: #64748b;
-            font-size: 0.8rem;
-            margin-left: 0.3rem;
-        }
-        .all-links-section {
-            background: white;
-            border-radius: 24px;
-            padding: 2rem;
-            margin: 2rem 0;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-        }
-        footer {
-            text-align: center;
-            margin-top: 4rem;
-            padding-top: 2rem;
-            border-top: 1px solid #e2e8f0;
-            color: #64748b;
-        }
-        /* Language specific */
-        [lang="de"] .english-only, [lang="en"] .german-only {
-            display: none;
-        }
-    </style>
+  <style>
+    :root{
+      --bg:#0b1020;
+      --card:#121a33;
+      --text:#e9edff;
+      --muted:#b8c0ff;
+      --accent:#7aa2ff;
+      --line:rgba(255,255,255,.12);
+      --good:rgba(120,255,180,.18);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 700px at 20% 0%, #18224a 0%, var(--bg) 55%) fixed;
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1180px;margin:0 auto;padding:28px 18px 64px}
+    header{
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border-radius:18px;
+      padding:20px 18px;
+      display:flex;
+      gap:18px;
+      align-items:flex-start;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .title h1{margin:0 0 6px;font-size:30px}
+    .title p{margin:0;color:var(--muted)}
+    .pillrow{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px}
+    .pill{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      padding:6px 10px;
+      border-radius:999px;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .lang{
+      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
+      padding:10px 12px; border:1px solid var(--line); border-radius:14px; background:rgba(0,0,0,.18)
+    }
+    .lang button{
+      cursor:pointer; border:1px solid var(--line); background:rgba(255,255,255,.05);
+      color:var(--text); padding:8px 10px; border-radius:12px; font-weight:800
+    }
+    .lang button[aria-pressed="true"]{border-color:rgba(122,162,255,.55); background:rgba(122,162,255,.18)}
+    .grid{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:16px;
+    }
+    @media (max-width: 960px){ .grid{grid-template-columns:1fr} }
+    .card{
+      border:1px solid var(--line);
+      background: rgba(18,26,51,.72);
+      border-radius:18px;
+      padding:18px;
+    }
+    .card h2{margin:0 0 10px;font-size:18px}
+    .card h3{margin:16px 0 8px;font-size:16px}
+    .subcard{
+      border:1px solid var(--line);
+      background:rgba(0,0,0,.12);
+      border-radius:16px;
+      padding:14px;
+      margin-top:12px;
+    }
+    .links{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+    }
+    @media (max-width: 640px){ .links{grid-template-columns:1fr} }
+    .linkbox{
+      border:1px solid var(--line);
+      background:rgba(0,0,0,.18);
+      border-radius:14px;
+      padding:10px 12px;
+    }
+    .linkbox small{display:block;color:var(--muted);margin-top:4px}
+    code.k{
+      display:block;
+      white-space:pre-wrap;
+      padding:10px 12px;
+      border:1px solid var(--line);
+      background:rgba(0,0,0,.18);
+      border-radius:14px;
+      color:var(--text);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
+      font-size: 13px;
+    }
+    .mediaGrid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+    @media (max-width: 640px){ .mediaGrid{grid-template-columns:1fr} }
+    figure{
+      margin:0;
+      border:1px solid var(--line);
+      background:rgba(0,0,0,.18);
+      border-radius:16px;
+      overflow:hidden;
+    }
+    figure img{
+      width:100%;
+      display:block;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      border-bottom:1px solid var(--line);
+    }
+    figcaption{
+      padding:10px 12px;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .notice{
+      border:1px solid var(--line);
+      background:rgba(120,255,180,.10);
+      border-radius:16px;
+      padding:12px 14px;
+      color:var(--muted);
+      margin-top:12px;
+    }
+    footer{
+      margin-top:16px;
+      color:var(--muted);
+      font-size:13px;
+      border-top:1px solid var(--line);
+      padding-top:16px;
+    }
+  </style>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Amir Mobasheraghdam",
+    "alternateName":[
+      "Amir Mobasher Aghdam",
+      "Amir Mobasheraghdam Author",
+      "Amir Mobasher (short form)"
+    ],
+    "description":"Author and technologist focused on workflow automation (n8n), Bundesliga result automation, and machine learning with Raspberry Pi.",
+    "knowsAbout":[
+      "n8n",
+      "Workflow Automation",
+      "Bundesliga result automation",
+      "Machine Learning",
+      "Raspberry Pi"
+    ],
+    "url":"#",
+    "mainEntityOfPage":"#"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Book",
+    "name":"Mein Computer lernt von mir",
+    "author":{"@type":"Person","name":"Amir Mobasheraghdam"},
+    "publisher":{"@type":"Organization","name":"BoD – Books on Demand"},
+    "url":"https://buchshop.bod.de/mein-computer-lernt-von-mir-amir-mobasheraghdam-9783695757824"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Book",
+    "name":"Ergebnis-Automation für die Bundesliga mit n8n",
+    "author":[
+      {"@type":"Person","name":"Amir Mobasheraghdam"},
+      {"@type":"Person","name":"Ladan Seddighi"}
+    ],
+    "publisher":{"@type":"Organization","name":"BoD – Books on Demand"},
+    "url":"https://buchshop.bod.de/ergebnis-automation-fuer-die-bundesliga-mit-n8n-amir-mobasheraghdam-9783695724925"
+  }
+  </script>
 </head>
+
 <body>
-    <div class="container">
-        <!-- HEADER mit Profilbild (Platzhalter) -->
-        <header>
-            <div class="profile-image">
-                <!-- Hier dein echtes Profilbild einfügen: <img src="profil.jpg" alt="Amir Mobasheraghdam"> -->
-                <span>AM</span>
-            </div>
-            <h1>Amir Mobasheraghdam</h1>
-            <div class="badge-container">
-                <span class="badge">📘 Autor</span>
-                <span class="badge">⚙️ Automation Engineer</span>
-                <span class="badge">🤖 n8n & KI</span>
-                <span class="badge">🐍 Python</span>
-                <span class="badge">🍓 Raspberry Pi</span>
-            </div>
-            
-            <!-- Language Switcher -->
-            <div class="lang-switch">
-                <button class="lang-btn active" onclick="switchLanguage('de')" id="btn-de">🇩🇪 Deutsch</button>
-                <button class="lang-btn" onclick="switchLanguage('en')" id="btn-en">🇬🇧 English</button>
-            </div>
-        </header>
+  <div class="wrap">
+    <header>
+      <div class="title">
+        <h1>Amir Mobasheraghdam</h1>
+        <p data-i18n="subtitle">
+          Author • Automation (n8n) • Machine Learning (Raspberry Pi) • Books, Projects & Direct Shop Links
+        </p>
 
-        <!-- BIOGRAPHIE Deutsch -->
-        <div id="bio-de" class="bio-card" lang="de">
-            <h2>Über Amir Mobasheraghdam</h2>
-            <div class="name-variants">
-                <strong>🔍 Namensvarianten für die Google-Suche:</strong> 
-                Amir Mobasheraghdam • Amir Mobasher Aghdam • Amir Mobasher (Kurzform) • امیر مبشراقدم
-            </div>
-            <p>Amir Mobasheraghdam ist <strong>Maschinenbauingenieur</strong> mit einem ungewöhnlich vielfältigen und praxisnahen Lernweg. Während seiner Ausbildung und Studienzeit war er mehrfach gezwungen, sich beruflich neu zu orientieren – nicht aus reiner Neugier, sondern aus der Notwendigkeit heraus, neue Wege auszuprobieren und Erfahrungen zu sammeln. So arbeitete er zeitweise in sehr unterschiedlichen Bereichen: unter anderem in der Konditorei, in der Friseurbranche, im handwerklich-technischen Umfeld, bei der Reparatur von Fahrrädern, im Umgang mit elektronischen Bauteilen und technischen Geräten sowie sogar in einer zahnmedizinischen Praxis. Viele dieser Stationen waren nicht von dauerhaftem Erfolg geprägt, vermittelten ihm jedoch wertvolle Einblicke, praktische Fähigkeiten und ein tiefes Verständnis für reale Arbeitsprozesse.</p>
-            <p>Vor rund vier Jahren begann Amir, sich intensiv mit <strong>Python-Programmierung und Machine Learning</strong> zu beschäftigen. Was zunächst als Experimentieren und Selbststudium begann, entwickelte sich schrittweise zu konkreten, praxisorientierten Projekten. Heute verbindet er technisches Denken mit Neugier, Kreativität und der Freude am Lernen. Er ist überzeugt, dass echtes Verständnis nicht durch Perfektion entsteht, sondern durch Ausprobieren, Scheitern, Lernen und konsequentes Weitermachen.</p>
-            
-            <div class="project-highlight">
-                <h3>🚀 Ausgewählte Projekte</h3>
-                <ul style="margin-left: 1.5rem;">
-                    <li><strong>KI-gestützter Fahrradhelm</strong> – Entwicklung eines intelligenten Helms mit Unfallerkennung und Blinker-Funktion (Computer Vision, Sensorik).</li>
-                    <li><strong>Bundesliga Bot mit n8n</strong> – Vollautomatischer Telegram-Bot, der Spielergebnisse und Termine live liefert (OpenLigaDB, n8n).</li>
-                    <li><strong>Machine Learning auf Raspberry Pi</strong> – Praxisprojekte zur Bilderkennung, z.B. Fahrräder klassifizieren (TensorFlow Lite, OpenCV).</li>
-                </ul>
-            </div>
+        <div class="pillrow" aria-label="Topics">
+          <span class="pill">Automation</span>
+          <span class="pill">n8n</span>
+          <span class="pill">Bundesliga</span>
+          <span class="pill">Machine Learning</span>
+          <span class="pill">Raspberry Pi</span>
+        </div>
+      </div>
+
+      <div class="lang" role="group" aria-label="Language switch">
+        <button type="button" id="btnDE" aria-pressed="true">Deutsch</button>
+        <button type="button" id="btnEN" aria-pressed="false">English</button>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- MAIN -->
+      <main class="card">
+        <h2 data-i18n="aboutTitle">Über / About Amir Mobasheraghdam</h2>
+        <p data-i18n="aboutText">
+          Diese Seite sammelt Bücher, Projekte und direkte Shop-Links von <strong>Amir Mobasheraghdam</strong>.
+          Schwerpunkte: <strong>Workflow Automation</strong> mit <strong>n8n</strong>, <strong>Bundesliga Result Automation</strong>,
+          <strong>Data Automation</strong> sowie <strong>Machine Learning</strong> mit dem <strong>Raspberry Pi</strong>.
+        </p>
+
+        <div class="subcard">
+          <h3 style="margin-top:0" data-i18n="nameTitle">Namensvarianten / Name Variants (Google)</h3>
+          <p style="margin:0;color:var(--muted)" data-i18n="nameText">
+            Amir Mobasheraghdam • Amir Mobasher Aghdam • Amir Mobasheraghdam Author • Amir Mobasher (short form)
+          </p>
         </div>
 
-        <!-- BIOGRAPHIE English -->
-        <div id="bio-en" class="bio-card" lang="en" style="display: none;">
-            <h2>About Amir Mobasheraghdam</h2>
-            <div class="name-variants">
-                <strong>🔍 Name variants for Google search:</strong> 
-                Amir Mobasheraghdam • Amir Mobasher Aghdam • Amir Mobasher (short form) • امیر مبشراقدم
-            </div>
-            <p>Amir Mobasheraghdam is a <strong>mechanical engineer</strong> with an unusually diverse and practical learning path. During his education and studies, he was repeatedly forced to reorient himself professionally – not out of pure curiosity, but out of necessity to try new paths and gain experience. He worked temporarily in very different areas: including a pastry shop, the hairdressing sector, a craft-technical environment, repairing bicycles, dealing with electronic components and technical devices, and even in a dental practice. Many of these stations were not marked by lasting success, but they gave him valuable insights, practical skills, and a deep understanding of real work processes.</p>
-            <p>About four years ago, Amir began to intensively study <strong>Python programming and machine learning</strong>. What started as experimentation and self-study gradually developed into concrete, practice-oriented projects. Today, he combines technical thinking with curiosity, creativity, and the joy of learning. He is convinced that true understanding does not come from perfection, but from trying, failing, learning, and consistently persevering.</p>
-            
-            <div class="project-highlight">
-                <h3>🚀 Featured Projects</h3>
-                <ul style="margin-left: 1.5rem;">
-                    <li><strong>AI-powered bicycle helmet</strong> – Development of a smart helmet with accident detection and turn signals (computer vision, sensors).</li>
-                    <li><strong>Bundesliga Bot with n8n</strong> – Fully automated Telegram bot delivering live match results and schedules (OpenLigaDB, n8n).</li>
-                    <li><strong>Machine Learning on Raspberry Pi</strong> – Hands-on image recognition projects, e.g., classifying bicycles (TensorFlow Lite, OpenCV).</li>
-                </ul>
-            </div>
+        <h3 data-i18n="projectsTitle">Projekte / Projects</h3>
+        <p style="margin-top:0;color:var(--muted)" data-i18n="projectsText">
+          Below are image placeholders for projects/screenshots. Replace the <code>src</code> with your own image URLs or local files.
+          (Example paths: <code>assets/...</code>)
+        </p>
+
+        <!-- PROJECTS / IMAGES (placeholders) -->
+        <div class="mediaGrid" aria-label="Projects and images">
+          <figure>
+            <img src="assets/amir-mobasheraghdam-project-n8n-bundesliga-1.jpg" alt="Amir Mobasheraghdam project screenshot - n8n Bundesliga automation" />
+            <figcaption data-i18n="img1">Project screenshot: n8n workflow for Bundesliga result automation (placeholder image).</figcaption>
+          </figure>
+
+          <figure>
+            <img src="assets/amir-mobasheraghdam-project-raspberry-pi-ml-2.jpg" alt="Amir Mobasheraghdam project screenshot - Raspberry Pi machine learning" />
+            <figcaption data-i18n="img2">Project screenshot: Raspberry Pi machine learning experiment (placeholder image).</figcaption>
+          </figure>
+
+          <figure>
+            <img src="assets/amir-mobasheraghdam-book-cover-mein-computer-lernt-von-mir.jpg" alt="Book cover - Mein Computer lernt von mir - Amir Mobasheraghdam" />
+            <figcaption data-i18n="img3">Book cover image: “Mein Computer lernt von mir” (placeholder image).</figcaption>
+          </figure>
+
+          <figure>
+            <img src="assets/amir-mobasheraghdam-book-cover-ergebnis-automation-bundesliga-n8n.jpg" alt="Book cover - Ergebnis-Automation für die Bundesliga mit n8n - Amir Mobasheraghdam" />
+            <figcaption data-i18n="img4">Book cover image: “Ergebnis-Automation für die Bundesliga mit n8n” (placeholder image).</figcaption>
+          </figure>
         </div>
 
-        <!-- BÜCHER / BOOKS -->
-        <h2 lang="de">📚 Meine Bücher</h2>
-        <h2 lang="en" style="display: none;">📚 My Books</h2>
-
-        <div class="book-grid">
-            <!-- Buch 1: Mein Computer lernt von mir -->
-            <div class="book-card">
-                <div class="book-cover-placeholder">
-                    <span>📘</span>
-                </div>
-                <h3 lang="de">Mein Computer lernt von mir</h3>
-                <h3 lang="en" style="display: none;">Mein Computer lernt von mir</h3>
-                <p lang="de"><em>Mein erstes Machine-Learning-Projekt mit dem Raspberry Pi</em></p>
-                <p lang="en" style="display: none;"><em>My first machine learning project with Raspberry Pi</em></p>
-                <p><span class="isbn">ISBN 978-3-695-75782-4</span></p>
-                <p lang="de">Erschienen: 06.01.2026 | BoD | 30 Seiten | 14,99 €</p>
-                <p lang="en" style="display: none;">Published: 2026-01-06 | BoD | 30 pages | €14.99</p>
-                <p lang="de"><strong>Kurzbeschreibung:</strong> Eine verständliche Einführung in Machine Learning mit dem Raspberry Pi – für neugierige Menschen von 9 bis 99. Praxisprojekt: Fahrräder auf Bildern erkennen. Inkl. Quellcode zum Download.</p>
-                <p lang="en" style="display: none;"><strong>Description:</strong> A practical introduction to machine learning with the Raspberry Pi – for curious people aged 9 to 99. Hands-on project: recognizing bicycles in images. Source code included.</p>
-                
-                <div class="links-container" id="book1-links-de" lang="de">
-                    <!-- Links werden per JS befüllt -->
-                </div>
-                <div class="links-container" id="book1-links-en" lang="en" style="display: none;">
-                    <!-- Links per JS (gleiche URLs) -->
-                </div>
-            </div>
-
-            <!-- Buch 2: Ergebnis-Automation für die Bundesliga mit n8n (mit Ladan Seddighi) -->
-            <div class="book-card">
-                <div class="book-cover-placeholder">
-                    <span>⚽</span>
-                </div>
-                <h3 lang="de">Ergebnis-Automation für die Bundesliga mit n8n</h3>
-                <h3 lang="en" style="display: none;">Ergebnis-Automation für die Bundesliga mit n8n</h3>
-                <p lang="de"><em>mit Ladan Seddighi</em></p>
-                <p lang="en" style="display: none;"><em>with Ladan Seddighi</em></p>
-                <p><span class="isbn">ISBN 978-3-695-72492-5</span></p>
-                <p lang="de">Erschienen: 30.01.2026 | BoD | 26 Seiten | 8,99 €</p>
-                <p lang="en" style="display: none;">Published: 2026-01-30 | BoD | 26 pages | €8.99</p>
-                <p lang="de"><strong>Kurzbeschreibung:</strong> Baue Schritt für Schritt deinen eigenen Bundesliga Bot mit n8n – ohne kompliziertes Programmieren. Du lernst die wichtigsten Nodes kennen, holst Spieldaten über OpenLigaDB, filterst dein Team und lässt automatisch eine Telegram-Nachricht schicken. Mit Screenshots, klaren Einstellungen und Debug-Tipps.</p>
-                <p lang="en" style="display: none;"><strong>Description:</strong> Build your own Bundesliga bot step by step with n8n – no complicated coding. Learn key nodes, fetch match data via OpenLigaDB, filter your team, and automatically send Telegram messages. Includes screenshots, clear settings, and debugging tips.</p>
-                <p lang="de"><strong>Über Ladan Seddighi:</strong> Ladan studiert an der Universität Bonn und interessiert sich für digitale Tools und Automatisierung. Sie legt Wert auf Struktur, Genauigkeit und verständliche Kommunikation.</p>
-                <p lang="en" style="display: none;"><strong>About Ladan Seddighi:</strong> Ladan studies at the University of Bonn and is interested in digital tools and automation. She values structure, accuracy, and clear communication.</p>
-                
-                <div class="links-container" id="book2-links-de" lang="de">
-                    <!-- Links per JS -->
-                </div>
-                <div class="links-container" id="book2-links-en" lang="en" style="display: none;">
-                    <!-- Links per JS -->
-                </div>
-            </div>
+        <div class="notice" data-i18n="notice">
+          Note: If you give me your real image URLs (or file names), I can insert them here exactly.
         </div>
 
-        <!-- ALLE LINKS AUF EINEN BLICK / ALL LINKS AT A GLANCE -->
-        <div class="all-links-section">
-            <h2 lang="de">🔗 Alle Shop-Links (Deutschland & Europa)</h2>
-            <h2 lang="en" style="display: none;">🔗 All Shop Links (Germany & Europe)</h2>
-            <div class="links-container" id="all-links-de" lang="de" style="max-height: 400px;"></div>
-            <div class="links-container" id="all-links-en" lang="en" style="max-height: 400px; display: none;"></div>
-            <p style="margin-top: 1rem; color: #475569;" lang="de">* Falls ein Link nicht direkt zum Buch führt, bitte die ISBN in die Shop-Suche eingeben.</p>
-            <p style="margin-top: 1rem; color: #475569; display: none;" lang="en">* If a link does not lead directly to the book, please enter the ISBN in the shop's search.</p>
+        <h2 style="margin-top:18px" data-i18n="booksTitle">Bücher / Books</h2>
+
+        <!-- BOOK 1 -->
+        <section class="subcard" aria-label="Mein Computer lernt von mir links">
+          <h3 style="margin:0 0 6px">Mein Computer lernt von mir — Amir Mobasheraghdam</h3>
+          <p style="margin:0 0 12px;color:var(--muted)" data-i18n="book1Desc">
+            A beginner-friendly introduction to a first machine-learning project using Raspberry Pi.
+          </p>
+
+          <div class="links">
+            <div class="linkbox">
+              <a href="https://buchshop.bod.de/mein-computer-lernt-von-mir-amir-mobasheraghdam-9783695757824" target="_blank" rel="noopener">BoD Buchshop</a>
+              <small>Publisher / Direct</small>
+            </div>
+            <div class="linkbox">
+              <a href="https://www.thalia.de/shop/home/artikeldetails/A1077898695" target="_blank" rel="noopener">Thalia</a>
+              <small>Germany</small>
+            </div>
+            <div class="linkbox">
+              <a href="https://www.hugendubel.de/de/taschenbuch/amir_mobasheraghdam-mein_computer_lernt_von_mir-52390358-produkt-details.html" target="_blank" rel="noopener">Hugendubel</a>
+              <small>Germany</small>
+            </div>
+            <div class="linkbox">
+              <a href="https://www.osiander.de/shop/home/artikeldetails/A1077898695" target="_blank" rel="noopener">Osiander</a>
+              <small>Germany</small>
+            </div>
+            <div class="linkbox">
+              <a href="https://www.jpc.de/s/amir%2Bmobasheraghdam" target="_blank" rel="noopener">jpc (author search)</a>
+              <small>Germany</small>
+            </div>
+            <div class="linkbox">
+              <a href="https://www.medimops.de/amir-mobasheraghdam-mein-computer-lernt-von-mir-mein-erstes-machine-learning-projekt-mit-dem-raspberry-pi-paperback-M03695757825.html" target="_blank" rel="noopener">medimops</a>
+              <small>Germany (used/new)</small>
+            </div>
+            <div class="linkbox">
+              <a href="https://www.rebuy.de/kaufen/author/amir-mobasheraghdam" target="_blank" rel="noopener">rebuy (author page)</a>
+              <small>Germany (used)</small>
+            </div>
+            <div class="linkbox">
+              <a href="https://www.booklooker.de/B%C3%BCcher/Angebote/infotext%3Ddaten?page=1&recPerPage=30&setMediaType=0&sortOrder=jahr" target="_blank" rel="noopener">Booklooker</a>
+              <small>Germany (marketplace)</small>
+            </div>
+            <div class="linkbox">
+              <a href="https://shop.falter.at/detail/9783695757824/mein-computer-lernt-von-mir" target="_blank" rel="noopener">Falter Shop</a>
+              <small>Austria</small>
+            </div>
+            <div class="linkbox">
+              <a href="https://www.waterstones.com/book/mein-computer-lernt-von-mir/amir-mobasheraghdam/9783695757824" target="_blank" rel="noopener">Waterstones</a>
+              <small>UK</small>
+            </div>
+            <div class="linkbox">
+              <a href="https://www.amazon.com/Mein-Computer-lernt-von-Machine-Learning-Projekt/dp/3695757825" target="_blank" rel="noopener">Amazon.com</a>
+              <small>International</small>
+            </div>
+            <div class="linkbox">
+              <a href="https://www.amazon.co.uk/Mein-Computer-lernt-von-Machine-Learning-Projekt/dp/3695757825" target="_blank" rel="noopener">Amazon.co.uk</a>
+              <small>UK</small>
+            </div>
+            <div class="linkbox">
+              <a href="https://katalog.dnb.de/EN/resource.html?id=1386107034&pr=0&sortA=bez&sortD=-dat&v=plist" target="_blank" rel="noopener">Deutsche Nationalbibliothek (DNB)</a>
+              <small>Bibliographic record</small>
+            </div>
+          </div>
+        </section>
+
+        <!-- BOOK 2 -->
+        <section class="subcard" aria-label="Ergebnis-Automation links">
+          <h3 style="margin:0 0 6px">Ergebnis-Automation für die Bundesliga mit n8n — Amir Mobasheraghdam, Ladan Seddighi</h3>
+          <p style="margin:0 0 12px;color:var(--muted)" data-i18n="book2Desc">
+            Automated results & workflows (n8n) around the Bundesliga. Co-author: Ladan Seddighi.
+          </p>
+
+          <div class="links">
+            <div class="linkbox">
+              <a href="https://buchshop.bod.de/ergebnis-automation-fuer-die-bundesliga-mit-n8n-amir-mobasheraghdam-9783695724925" target="_blank" rel="noopener">BoD Buchshop</a>
+              <small>Publisher / Direct</small>
+            </div>
+            <div class="linkbox">
+              <a href="https://www.thalia.de/shop/home/artikeldetails/A1078121770" target="_blank" rel="noopener">Thalia</a>
+              <small>Germany</small>
+            </div>
+            <div class="linkbox">
+              <a href="https://www.hugendubel.de/de/buch_kartoniert/amir_mobasheraghdam_ladan_seddighi-ergebnis_automation_fuer_die_bundesliga_mit_n8n-52518185-produkt-details.html" target="_blank" rel="noopener">Hugendubel</a>
+              <small>Germany</small>
+            </div>
+            <div class="linkbox">
+              <a href="https://www.osiander.de/shop/home/artikeldetails/A1078121770" target="_blank" rel="noopener">Osiander</a>
+              <small>Germany</small>
+            </div>
+            <div class="linkbox">
+              <a href="https://www.jpc.de/jpcng/books/detail/-/art/amir-mobasheraghdam-ergebnis-automation-fuer-die-bundesliga-mit-n8n/hnum/12611021" target="_blank" rel="noopener">jpc</a>
+              <small>Germany</small>
+            </div>
+            <div class="linkbox">
+              <a href="https://www.medimops.de/amir-mobasheraghdam-ergebnis-automation-fuer-die-bundesliga-mit-n8n-paperback-M03695724927.html" target="_blank" rel="noopener">medimops</a>
+              <small>Germany (used/new)</small>
+            </div>
+            <div class="linkbox">
+              <a href="https://www.bokus.com/bok/9783695724925/ergebnis-automation-fur-die-bundesliga-mit-n8n/" target="_blank" rel="noopener">Bokus</a>
+              <small>Sweden</small>
+            </div>
+            <div class="linkbox">
+              <a href="https://www.saxo.com/dk/ergebnis-automation-fyr-die-bundesliga-mit-n8n_bog_9783695724925" target="_blank" rel="noopener">Saxo</a>
+              <small>Denmark</small>
+            </div>
+            <div class="linkbox">
+              <a href="https://www.donner.nl/en/books/informatics-computing/?FQ=50%2C20&LANGUAGE=ger&PRODUCTFORM=BC&THEMA=UM%2A" target="_blank" rel="noopener">Donner (category listing)</a>
+              <small>Netherlands</small>
+            </div>
+            <div class="linkbox">
+              <a href="https://biblio.co.nz/book/ergebnis-automation-fur-die-bundesliga-mit/d/1734073065" target="_blank" rel="noopener">Biblio</a>
+              <small>International marketplace</small>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- SIDEBAR -->
+      <aside class="card" aria-label="Quick access">
+        <h2 data-i18n="quickTitle">Schnellzugriff / Quick Access</h2>
+        <p data-i18n="quickText" style="color:var(--muted);margin-top:0">
+          One-click links to the most important pages.
+        </p>
+
+        <div class="links">
+          <div class="linkbox">
+            <a href="https://buchshop.bod.de/mein-computer-lernt-von-mir-amir-mobasheraghdam-9783695757824" target="_blank" rel="noopener">BoD: Mein Computer lernt von mir</a>
+            <small>Direct</small>
+          </div>
+          <div class="linkbox">
+            <a href="https://buchshop.bod.de/ergebnis-automation-fuer-die-bundesliga-mit-n8n-amir-mobasheraghdam-9783695724925" target="_blank" rel="noopener">BoD: Ergebnis-Automation (n8n)</a>
+            <small>Direct</small>
+          </div>
+          <div class="linkbox">
+            <a href="https://www.jpc.de/s/amir%2Bmobasheraghdam" target="_blank" rel="noopener">jpc: Amir Mobasheraghdam</a>
+            <small>Author search</small>
+          </div>
+          <div class="linkbox">
+            <a href="https://www.rebuy.de/kaufen/author/amir-mobasheraghdam" target="_blank" rel="noopener">rebuy: Amir Mobasheraghdam</a>
+            <small>Author page</small>
+          </div>
         </div>
 
-        <!-- FOOTER -->
+        <h3 data-i18n="searchTitle">Google Search Terms (copy)</h3>
+        <code class="k">Amir Mobasheraghdam
+Amir Mobasher Aghdam
+"Mein Computer lernt von mir" Amir Mobasheraghdam
+"Ergebnis-Automation für die Bundesliga mit n8n" Amir Mobasheraghdam
+Amir Mobasheraghdam n8n Bundesliga automation
+Raspberry Pi machine learning Amir Mobasheraghdam book</code>
+
         <footer>
-            <p>© 2026 Amir Mobasheraghdam | Letzte Aktualisierung: Februar 2026</p>
-            <p lang="de">Diese Seite enthält Affiliate-freie Direktlinks zu allen gelisteten Buchhandlungen.</p>
-            <p lang="en" style="display: none;">This page contains affiliate-free direct links to all listed bookstores.</p>
+          <div data-i18n="footerNote">
+            Note: Replace the image paths in the Projects section with your real image URLs/files.
+          </div>
         </footer>
+      </aside>
     </div>
+  </div>
 
-    <script>
-        // ---------------------------------------------
-        // ALLE SHOP-LINKS (basierend auf deiner Liste)
-        // ---------------------------------------------
-        const shopLinks = {
-            book1: [
-                { name: "BoD (Verlag / Publisher)", url: "https://buchshop.bod.de/mein-computer-lernt-von-mir-amir-mobasheraghdam-9783695757824", country: "DE" },
-                { name: "Thalia", url: "https://www.thalia.de/shop/home/artikeldetails/A1077898695", country: "DE" },
-                { name: "Hugendubel", url: "https://www.hugendubel.de/de/taschenbuch/amir_mobasheraghdam-mein_computer_lernt_von_mir-52390358-produkt-details.html", country: "DE" },
-                { name: "Osiander", url: "https://www.osiander.de/shop/home/artikeldetails/A1077898695", country: "DE" },
-                { name: "jpc (Autorenseite)", url: "https://www.jpc.de/s/amir%2Bmobasheraghdam", country: "DE" },
-                { name: "medimops", url: "https://www.medimops.de/amir-mobasheraghdam-mein-computer-lernt-von-mir-mein-erstes-machine-learning-projekt-mit-dem-raspberry-pi-paperback-M03695757825.html", country: "DE" },
-                { name: "rebuy (Autorenseite)", url: "https://www.rebuy.de/kaufen/author/amir-mobasheraghdam", country: "DE" },
-                { name: "Booklooker", url: "https://www.booklooker.de/B%C3%BCcher/Angebote/infotext%3Ddaten?page=1&recPerPage=30&setMediaType=0&sortOrder=jahr", country: "DE" },
-                { name: "Falter Shop", url: "https://shop.falter.at/detail/9783695757824/mein-computer-lernt-von-mir", country: "AT" },
-                { name: "Waterstones", url: "https://www.waterstones.com/book/mein-computer-lernt-von-mir/amir-mobasheraghdam/9783695757824", country: "UK" },
-                { name: "Amazon.com", url: "https://www.amazon.com/Mein-Computer-lernt-von-Machine-Learning-Projekt/dp/3695757825", country: "US" },
-                { name: "Amazon.co.uk", url: "https://www.amazon.co.uk/Mein-Computer-lernt-von-Machine-Learning-Projekt/dp/3695757825", country: "UK" },
-                { name: "Deutsche Nationalbibliothek", url: "https://katalog.dnb.de/EN/resource.html?id=1386107034&pr=0&sortA=bez&sortD=-dat&v=plist", country: "DE (Eintrag)" }
-            ],
-            book2: [
-                { name: "BoD (Verlag / Publisher)", url: "https://buchshop.bod.de/ergebnis-automation-fuer-die-bundesliga-mit-n8n-amir-mobasheraghdam-9783695724925", country: "DE" },
-                { name: "Thalia", url: "https://www.thalia.de/shop/home/artikeldetails/A1078121770", country: "DE" },
-                { name: "Hugendubel", url: "https://www.hugendubel.de/de/buch_kartoniert/amir_mobasheraghdam_ladan_seddighi-ergebnis_automation_fuer_die_bundesliga_mit_n8n-52518185-produkt-details.html", country: "DE" },
-                { name: "Osiander", url: "https://www.osiander.de/shop/home/artikeldetails/A1078121770", country: "DE" },
-                { name: "jpc", url: "https://www.jpc.de/jpcng/books/detail/-/art/amir-mobasheraghdam-ergebnis-automation-fuer-die-bundesliga-mit-n8n/hnum/12611021", country: "DE" },
-                { name: "medimops", url: "https://www.medimops.de/amir-mobasheraghdam-ergebnis-automation-fuer-die-bundesliga-mit-n8n-paperback-M03695724927.html", country: "DE" },
-                { name: "Bokus", url: "https://www.bokus.com/bok/9783695724925/ergebnis-automation-fur-die-bundesliga-mit-n8n/", country: "SE" },
-                { name: "Saxo", url: "https://www.saxo.com/dk/ergebnis-automation-fyr-die-bundesliga-mit-n8n_bog_9783695724925", country: "DK" },
-                { name: "Donner (Kategorie)", url: "https://www.donner.nl/en/books/informatics-computing/?FQ=50%2C20&LANGUAGE=ger&PRODUCTFORM=BC&THEMA=UM%2A", country: "NL" },
-                { name: "Biblio", url: "https://biblio.co.nz/book/ergebnis-automation-fur-die-bundesliga-mit/d/1734073065", country: "International" }
-            ]
-        };
+  <!-- DE/EN toggle (German + English only) -->
+  <script>
+    const t = {
+      de: {
+        subtitle: "Autor • Automation (n8n) • Machine Learning (Raspberry Pi) • Bücher, Projekte & Direktlinks",
+        aboutTitle: "Über Amir Mobasheraghdam",
+        aboutText: "Diese Seite sammelt Bücher, Projekte und direkte Shop-Links von Amir Mobasheraghdam. Schwerpunkte: Workflow-Automatisierung mit n8n, Bundesliga-Ergebnis-Automation, Data Automation sowie Machine Learning mit dem Raspberry Pi.",
+        nameTitle: "Namensvarianten (Google)",
+        nameText: "Amir Mobasheraghdam • Amir Mobasher Aghdam • Amir Mobasheraghdam Author • Amir Mobasher (Kurzform)",
+        projectsTitle: "Projekte",
+        projectsText: "Unten sind Bild-Platzhalter für Projekte/Screenshots. Ersetze das src-Attribut mit deinen eigenen Bild-URLs oder lokalen Dateien (z. B. assets/...).",
+        img1: "Projekt-Screenshot: n8n-Workflow für Bundesliga-Ergebnis-Automation (Platzhalterbild).",
+        img2: "Projekt-Screenshot: Raspberry-Pi Machine-Learning-Experiment (Platzhalterbild).",
+        img3: "Buchcover: „Mein Computer lernt von mir“ (Platzhalterbild).",
+        img4: "Buchcover: „Ergebnis-Automation für die Bundesliga mit n8n“ (Platzhalterbild).",
+        notice: "Hinweis: Wenn du mir echte Bild-URLs (oder Dateinamen) gibst, kann ich sie hier exakt eintragen.",
+        booksTitle: "Bücher",
+        book1Desc: "Einsteigerfreundlicher Einstieg in ein erstes Machine-Learning-Projekt mit dem Raspberry Pi.",
+        book2Desc: "Automatisierte Ergebnisse & Workflows (n8n) rund um die Bundesliga. Co-Autorin: Ladan Seddighi.",
+        quickTitle: "Schnellzugriff",
+        quickText: "Ein-Klick-Links zu den wichtigsten Seiten.",
+        searchTitle: "Google-Suchbegriffe (kopieren)",
+        footerNote: "Hinweis: Ersetze in der Projekt-Sektion die Bildpfade durch deine echten Bild-URLs/Dateien."
+      },
+      en: {
+        subtitle: "Author • Automation (n8n) • Machine Learning (Raspberry Pi) • Books, Projects & Direct Links",
+        aboutTitle: "About Amir Mobasheraghdam",
+        aboutText: "This page collects books, projects, and direct shop links for Amir Mobasheraghdam. Focus areas: workflow automation with n8n, Bundesliga result automation, data automation, and machine learning with Raspberry Pi.",
+        nameTitle: "Name variants (Google)",
+        nameText: "Amir Mobasheraghdam • Amir Mobasher Aghdam • Amir Mobasheraghdam Author • Amir Mobasher (short form)",
+        projectsTitle: "Projects",
+        projectsText: "Below are image placeholders for projects/screenshots. Replace the src attribute with your own image URLs or local files (e.g., assets/...).",
+        img1: "Project screenshot: n8n workflow for Bundesliga result automation (placeholder image).",
+        img2: "Project screenshot: Raspberry Pi machine learning experiment (placeholder image).",
+        img3: "Book cover: “Mein Computer lernt von mir” (placeholder image).",
+        img4: "Book cover: “Ergebnis-Automation für die Bundesliga mit n8n” (placeholder image).",
+        notice: "Note: If you give me real image URLs (or file names), I can insert them here exactly.",
+        booksTitle: "Books",
+        book1Desc: "Beginner-friendly introduction to a first machine-learning project using Raspberry Pi.",
+        book2Desc: "Automated results & workflows (n8n) around the Bundesliga. Co-author: Ladan Seddighi.",
+        quickTitle: "Quick Access",
+        quickText: "One-click links to the most important pages.",
+        searchTitle: "Google search terms (copy)",
+        footerNote: "Note: Replace the image paths in the Projects section with your real image URLs/files."
+      }
+    };
 
-        // Ländercodes in lesbare Namen
-        const countryNames = {
-            'DE': 'Deutschland', 'AT': 'Österreich', 'CH': 'Schweiz', 'UK': 'Großbritannien', 
-            'US': 'USA', 'SE': 'Schweden', 'DK': 'Dänemark', 'NL': 'Niederlande',
-            'International': 'International'
-        };
+    function setLang(lang){
+      document.documentElement.lang = (lang === "de") ? "de" : "en";
+      document.querySelectorAll("[data-i18n]").forEach(el=>{
+        const key = el.getAttribute("data-i18n");
+        if(t[lang][key]) el.textContent = t[lang][key];
+      });
+      document.getElementById("btnDE").setAttribute("aria-pressed", lang==="de");
+      document.getElementById("btnEN").setAttribute("aria-pressed", lang==="en");
+    }
 
-        // Container befüllen
-        function renderLinks() {
-            // Buch 1 (DE + EN Container separat)
-            const book1ContainerDe = document.getElementById('book1-links-de');
-            const book1ContainerEn = document.getElementById('book1-links-en');
-            book1ContainerDe.innerHTML = '';
-            book1ContainerEn.innerHTML = '';
-            
-            shopLinks.book1.forEach(link => {
-                // Deutsch
-                let aDe = document.createElement('a');
-                aDe.href = link.url;
-                aDe.target = '_blank';
-                aDe.rel = 'noopener';
-                aDe.innerHTML = `${link.name} <span class="shop-country">(${countryNames[link.country] || link.country})</span>`;
-                book1ContainerDe.appendChild(aDe);
-                
-                // Englisch (gleiche URL, nur ggf. andere Länderbezeichnung)
-                let aEn = document.createElement('a');
-                aEn.href = link.url;
-                aEn.target = '_blank';
-                aEn.rel = 'noopener';
-                let countryEn = link.country;
-                if (link.country === 'DE') countryEn = 'Germany';
-                else if (link.country === 'AT') countryEn = 'Austria';
-                else if (link.country === 'CH') countryEn = 'Switzerland';
-                else if (link.country === 'UK') countryEn = 'United Kingdom';
-                else if (link.country === 'SE') countryEn = 'Sweden';
-                else if (link.country === 'DK') countryEn = 'Denmark';
-                else if (link.country === 'NL') countryEn = 'Netherlands';
-                aEn.innerHTML = `${link.name} <span class="shop-country">(${countryEn})</span>`;
-                book1ContainerEn.appendChild(aEn);
-            });
+    document.getElementById("btnDE").addEventListener("click", ()=>setLang("de"));
+    document.getElementById("btnEN").addEventListener("click", ()=>setLang("en"));
 
-            // Buch 2
-            const book2ContainerDe = document.getElementById('book2-links-de');
-            const book2ContainerEn = document.getElementById('book2-links-en');
-            book2ContainerDe.innerHTML = '';
-            book2ContainerEn.innerHTML = '';
-            
-            shopLinks.book2.forEach(link => {
-                // Deutsch
-                let aDe = document.createElement('a');
-                aDe.href = link.url;
-                aDe.target = '_blank';
-                aDe.rel = 'noopener';
-                aDe.innerHTML = `${link.name} <span class="shop-country">(${countryNames[link.country] || link.country})</span>`;
-                book2ContainerDe.appendChild(aDe);
-                
-                // Englisch
-                let aEn = document.createElement('a');
-                aEn.href = link.url;
-                aEn.target = '_blank';
-                aEn.rel = 'noopener';
-                let countryEn = link.country;
-                if (link.country === 'DE') countryEn = 'Germany';
-                else if (link.country === 'AT') countryEn = 'Austria';
-                else if (link.country === 'CH') countryEn = 'Switzerland';
-                else if (link.country === 'UK') countryEn = 'United Kingdom';
-                else if (link.country === 'SE') countryEn = 'Sweden';
-                else if (link.country === 'DK') countryEn = 'Denmark';
-                else if (link.country === 'NL') countryEn = 'Netherlands';
-                aEn.innerHTML = `${link.name} <span class="shop-country">(${countryEn})</span>`;
-                book2ContainerEn.appendChild(aEn);
-            });
-
-            // Alle Links (gesamt)
-            const allDe = document.getElementById('all-links-de');
-            const allEn = document.getElementById('all-links-en');
-            allDe.innerHTML = '';
-            allEn.innerHTML = '';
-            
-            [...shopLinks.book1, ...shopLinks.book2].forEach(link => {
-                // Deutsch
-                let aDe = document.createElement('a');
-                aDe.href = link.url;
-                aDe.target = '_blank';
-                aDe.rel = 'noopener';
-                aDe.innerHTML = `${link.name} <span class="shop-country">(${countryNames[link.country] || link.country})</span>`;
-                allDe.appendChild(aDe);
-                
-                // Englisch
-                let aEn = document.createElement('a');
-                aEn.href = link.url;
-                aEn.target = '_blank';
-                aEn.rel = 'noopener';
-                let countryEn = link.country;
-                if (link.country === 'DE') countryEn = 'Germany';
-                else if (link.country === 'AT') countryEn = 'Austria';
-                else if (link.country === 'CH') countryEn = 'Switzerland';
-                else if (link.country === 'UK') countryEn = 'United Kingdom';
-                else if (link.country === 'SE') countryEn = 'Sweden';
-                else if (link.country === 'DK') countryEn = 'Denmark';
-                else if (link.country === 'NL') countryEn = 'Netherlands';
-                aEn.innerHTML = `${link.name} <span class="shop-country">(${countryEn})</span>`;
-                allEn.appendChild(aEn);
-            });
-        }
-
-        // Sprachwechsel
-        function switchLanguage(lang) {
-            // Buttons aktiv/inaktiv
-            document.getElementById('btn-de').classList.toggle('active', lang === 'de');
-            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-            
-            // HTML lang Attribut setzen
-            document.documentElement.lang = lang;
-            
-            // Alle Elemente mit lang Attribut umschalten
-            const allDeElements = document.querySelectorAll('[lang="de"]');
-            const allEnElements = document.querySelectorAll('[lang="en"]');
-            
-            if (lang === 'de') {
-                allDeElements.forEach(el => el.style.display = '');
-                allEnElements.forEach(el => el.style.display = 'none');
-            } else {
-                allDeElements.forEach(el => el.style.display = 'none');
-                allEnElements.forEach(el => el.style.display = '');
-            }
-            
-            // Spezialfall: Die Buch-Container für Links haben eigenes lang-Attribut
-            // Das wird durch die generische Regel abgedeckt
-        }
-
-        // Initialisierung
-        renderLinks();
-        switchLanguage('de'); // Start mit Deutsch
-    </script>
+    setLang("de");
+  </script>
 </body>
 </html>
